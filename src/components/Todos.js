@@ -1,16 +1,20 @@
-import React from 'react'
-import Todo from './Todo';
+import React from "react";
+import Todo from "./Todo/Todo";
 
-const Todos = (props)=>{
+const Todos = (props) => {
+  
     return (
-        <div>
-        <Todo title ="Learn algorithms" id={1}/>
-        <Todo title ="Learn algorithms" id={2}/>
-        <Todo title ="Learn algorithms" id={3}/>
-        <Todo title ="Learn algorithms" id={4}/>
-    
-        </div>
-    )
-}
+    <div >
+      {props.todos.map((todo) => (
+        <Todo
+          title={todo.title}
+          key={todo.id}
+          id={todo.id}
+          completed={todo.completed}
+          toggleComplete={props.toggleComplete.bind(this, todo.id)}/>
+      ))}
+    </div>
+  );
+};
 
 export default Todos;
