@@ -43,6 +43,16 @@ class App extends Component {
     });
   };
 
+  deleteTodo = (id)=>{
+    let todos =this.state.todos.filter((todo)=>{
+      return todo.id!==id
+    })
+
+    this.setState({
+      todos
+    })
+  }
+
   toggleComplete = (id) => {
     let updatedTodos = this.state.todos.map((todo) => {
       if (todo.id === id) {
@@ -65,6 +75,7 @@ class App extends Component {
             <Todos
               todos={this.state.todos}
               toggleComplete={this.toggleComplete}
+              deleteTodo = {this.deleteTodo}
             />
           </div>
         </div>

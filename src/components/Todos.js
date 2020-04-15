@@ -11,7 +11,8 @@ const Todos = (props) => {
           key={todo.id}
           id={todo.id}
           completed={todo.completed}
-          toggleComplete={props.toggleComplete.bind(this, todo.id)}/>
+          toggleComplete={props.toggleComplete.bind(this, todo.id)}
+          deleteTodo={props.deleteTodo.bind(this,todo.id)}/>
       ))}
     </div>
   );

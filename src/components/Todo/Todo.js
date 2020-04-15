@@ -2,7 +2,7 @@ import React from "react";
 import "./Todo.css";
 const Todo = (props) => {
   return (
-    <div onClick={props.toggleComplete} 
+    <div  
     className="todo-card card my-3 p-3">
       <div className="custom-control custom-checkbox">
         <input
@@ -16,10 +16,14 @@ const Todo = (props) => {
         <label
           className="custom-control-label"
           style={{ textDecoration: props.completed ? "line-through" : "none" }}
-          htmlFor={props.id}
-        >
+          htmlFor={props.id}>
           {props.title}
         </label>
+
+        <button className="btn btn-danger float-right"
+        onClick={props.deleteTodo}>
+        Delete
+        </button>
       </div>
     </div>
   );
