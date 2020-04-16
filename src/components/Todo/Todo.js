@@ -14,7 +14,7 @@ const Todo = (props) => {
         />
 
         <label
-          className="custom-control-label"
+          className="custom-control-label font-weight-light"
           style={{ textDecoration: props.completed ? "line-through" : "none" }}
           htmlFor={props.id}>
           {props.title}

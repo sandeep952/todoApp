@@ -3,7 +3,7 @@ import "./App.css";
 import Todos from "./components/Todos";
 import AddTodo from "./components/AddTodo";
 import Header from "./components/Header";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import About from "./components/About";
 
 class App extends Component {
@@ -68,11 +68,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container">
         <Router>
-          <div className="row">
-            <div className="col-md-8 offset-md-2">
-              <Header />
+            <Header />
               <Route exact path="/">
                 <AddTodo addTodo={this.addTodo} />
                 <Todos
@@ -82,8 +80,6 @@ class App extends Component {
                 />
               </Route>
               <Route exact path="/about" component={About} />
-            </div>
-          </div>
         </Router>
       </div>
     );
