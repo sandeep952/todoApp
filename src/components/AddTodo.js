@@ -25,7 +25,7 @@ class AddTodo extends Component {
     return (
       <div>
         <form onSubmit={this.onSubmit}>
-          <div className="form">
+          <div className="form text-center">
             <div className="form-group">
               <input
                 type="text"
@@ -34,7 +34,7 @@ class AddTodo extends Component {
                 onChange={this.handleChange}
               />
 
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <button type="submit" className="btn btn-primary m-2">Submit</button>
             </div>
           </div>
         </form>
