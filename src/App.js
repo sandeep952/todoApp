@@ -5,7 +5,7 @@ import AddTodo from "./components/AddTodo";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import About from "./components/About";
-
+// App Component
 class App extends Component {
   constructor() {
     super();
